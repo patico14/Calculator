@@ -1,5 +1,5 @@
 const textOpi1 = document.getElementById("opi1")
-const textOperacion = document.getElementById("opieracion")
+const textOperacion = document.getElementById("operacion")
 const textOpi2 = document.getElementById("opi2")
 const btnCalcular = document.getElementById("calcular")
 const pResultado = document.getElementById("resultado")
@@ -8,7 +8,7 @@ btnCalcular.addEventListener('click', calcular)
 
 function calcular() {
     const operacion = textOperacion.value
-    const opi1 = parsseFloat(textOpi1.value)  //parseFloat solo pasa numeros no letras en ese caso botaria un NAN
+    const opi1 = parseFloat(textOpi1.value)  
     const opi2 = parseFloat(textOpi2.value)
 
     if ((operacion == '+' || operacion == '-' || operacion == '*' || 
@@ -31,7 +31,7 @@ function calcular() {
         pResultado.style = "color:black"
         pResultado.innerText = "= " + resultado        
     }else {
-            pResultado.style = "color:red"
-            pResultado.innerText = "Calculo imposible"
+        pResultado.style = "color:red"
+        pResultado.innerText = "Calculo imposible"
     }       
 }
